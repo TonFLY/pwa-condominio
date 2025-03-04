@@ -16,6 +16,11 @@ db.moradores.put({
   tipo: "admin"
 });
 
+// Criando tabela de agendamentos
+db.version(2).stores({
+  moradores: "++id, nome, senha, tipo",
+  agendamentos: "++id, morador, visitante, data, status"
+});
 
 
 // Exemplo de adição de dados
